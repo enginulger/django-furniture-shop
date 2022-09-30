@@ -1,0 +1,108 @@
+{% load static %}
+<!-- Login -->
+<!--<div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>-->
+<!-- Endlogin-->
+
+<div class="wrap">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="bg-wrap">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <p class="mb-0 phone pl-md-2 pt-md-2">
+                                <a href="tel:{{setting.phone}}" class="mr-2"><span class="icon-phone mr-1"></span>{{setting.phone}}</a>
+                                <a href="mailto:{{setting.email}}"><span class="icon-mail_outline mr-1"></span>
+                                    {{setting.email}}</a>
+                            </p>
+                        </div>
+
+                        <div class="col-md-4 hid-den">
+                            <div class="social-media float-right">
+                                <p class="mb-0 d-flex">
+                                    {% for i in sosyalMedya %}
+                                    <a href="{{i.href}}" class="d-flex align-items-center justify-content-center"><span
+                                            class="{{ i.icon }}"><i class="sr-only">{{i.title}}</i></span></a>
+                                    {% endfor %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="site-wrap">
+    <!-- Header -->
+    <!-- .site-mobile-menu -->
+    <div class="site-mobile-menu">
+        <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+                <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+    </div>
+
+    <div class="site-navbar-wrap js-site-navbar bg-white">
+
+        <div class="container-fluid">
+            <div class="site-navbar bg-light">
+                <div class="row align-items-center">
+                    <div class="col-2">
+                        <h2 class="mb-0 site-logo">
+                            <a href="/" class="navbar-brand">
+                                <img src="{{ setting.svg.url }}" alt="">
+                            </a>
+                        </h2>
+                    </div>
+                    <div class="col-10">
+                        <nav class="site-navigation text-right" role="navigation">
+                            <div class="container">
+                                <div class="d-inline-block d-lg-none ml-md-0 mr-auto py-3">
+                                    <a href="#" class="site-menu-toggle js-menu-toggle text-black"><span
+                                            class="icon-menu h3"></span></a>
+                                </div>
+                                {% with request.resolver_match.url_name as url_name %}
+                                <ul class="site-menu js-clone-nav d-none d-lg-block">
+                                    <li class="{{ home_page }}"><a href="/">Anasayfa</a></li>
+                                    <li class="{{ kurumsal_page }}"><a href="/kurumsal">KURUMSAL</a>
+                                    </li>
+                                    <li class="{{ urunler_page }}"><a
+                                            href="/urunler">ÜRÜNLER</a>
+
+
+
+                                    </li>
+                                    <li class="{{ referanslar_page }}"><a href="/referanslar">REFERANSLAR</a>
+
+                                    </li>
+
+                                    <li class="{{iletisim_page}}"><a href="/iletisim">İLETİŞİM</a></li>
+
+                                    <li><a href="javascript:void(0);"><span
+                                            class="d-inline-block  text-white btn btn-danger">Online Teklif</span></a>
+                                    </li>
+
+                                </ul>
+                                {% endwith %}
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- EndHeader -->

@@ -1,0 +1,87 @@
+{% load static %}
+
+
+<footer class="site-footer bg-dark">
+    <div class="container">
+
+
+        <div class="row">
+           <div class="col-md-4 mb-4 mb-md-0 ml-auto">
+
+                    <h2 class="mb-0 site-logo">
+                        <a href="/" class="navbar-brand">
+                            <img src="{{setting.svg.url}}" alt="">
+                        </a>
+                    </h2>
+
+            </div>
+            <div class="col-md-5 mb-4 mb-md-0">
+                <h3 class="footer-heading mb-4 text-white">BİZE ULAŞIN</h3>
+
+
+                <p class="mb-0 font-weight-bold text-white">Adres</p>
+                <p class="mb-4"><a href="{{setting.maps}}">{{setting.address}}</a></p>
+
+                <p class="mb-0 font-weight-bold text-white">Telefon</p>
+                <p class="mb-4"><a href="tel:{{setting.phone}}">{{setting.phone}}</a></p>
+
+                <p class="mb-0 font-weight-bold text-white">Email</p>
+                <p class="mb-0"><a href="mailto:{{setting.email}}">{{ setting.email }}</a></p>
+            </div>
+            <div class="col-md-2">
+
+                <div class="row">
+                    <div class="col-md-12"><h3 class="footer-heading mb-4 text-white">Sosyal Medya</h3></div>
+                    <div class="col-md-12">
+                        <p>
+                            {% for i in sosyalMedya %}
+                            <a href="{{i.href}}" class="p-2"><span class="{{ i.icon }}"></span></a>
+                            {% endfor %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+            <div class="col-md-12">
+                <p>
+
+                    Copyright &copy;<script>document.write(new Date().getFullYear());</script>
+                    Tüm hakları saklıdır | Tasarım <i class="icon-heart text-danger"
+                                                                        aria-hidden="true"></i> by <a
+                        href="{{setting.url}}" target="_blank">{{setting.author}}</a>
+
+                </p>
+
+
+            </div>
+
+        </div>
+    </div>
+</footer>
+</div>
+
+
+<!-- jQuery !-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<!-- jQuery UI !-->
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+<!--<script src="{% static 'home/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'home/js/jquery-ui.js' %}"></script>
+
+<script src="{% static 'home/js/jquery-migrate-3.0.1.min.js' %}"></script>-->
+<script src="{% static 'home/js/popper.min.js' %}"></script>
+<script src="{% static 'home/js/bootstrap.min.js' %}"></script>
+<script src="{% static 'home/js/owl.carousel.min.js' %}"></script>
+<script src="{% static 'home/js/jquery.stellar.min.js' %}"></script>
+
+<script src="{% static 'home/js/jquery.waypoints.min.js' %}"></script>
+<script src="{% static 'home/js/jquery.animateNumber.min.js' %}"></script>
+
+
+<script src="{% static 'home/js/aos.js' %}"></script>
+
+<script src="{% static 'home/js/main.js' %}"></script>
+

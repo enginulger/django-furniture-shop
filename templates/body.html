@@ -1,0 +1,81 @@
+{% load static %}
+
+<div class="slant-1"></div>
+
+
+<div class="site-section ">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+
+                <h2 class="site-section-heading text-uppercase text-center font-secondary caption0">ÜRÜNLERİMİZ</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 block-13 nav-direction-white">
+                <div class="nonloop-block-13 owl-carousel">
+
+                    {% for rs in urunler%}
+                    <div class="media-image">
+                        <img src="{{ rs.image.url }}" alt="{{rs.title}}" title="{{rs.title}}" class="img-fluid">
+                        <div class="media-image-body">
+                            <h2 class="font-secondary ">{{ rs.title|title }}</h2>
+
+                            <p><a href="/{{rs.kategori|lower}}/{{rs.id}}/{{rs.slug}}" class="btn btn-danger text-white px-4">Detaylı Bilgi</a></p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="site-section first-section">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-md-12 text-center" data-aos="fade">
+                <h2 class="site-section-heading text-uppercase text-center font-secondary caption0">ÜSTÜN HİZMETLER</h2>
+            </div>
+        </div>
+        <div class="row border-responsive">
+            <div class="col-md-6 col-lg-6 mb-4 mb-lg-0 border-right" data-aos="fade-up" data-aos-delay="">
+                <div class="media-image">
+                    <div class="text-center">
+
+                            <span class="icon-pencil display-4 d-block mb-3 text-danger"></span>
+                            <h3 class="text-uppercase h4 mb-3">TASARIM</h3>
+                            <p>Hazır veya özel tasarım</p>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="300">
+                <div class="media-image">
+                    <div class="text-center">
+
+                            <span class="icon-cogs display-4 d-block mb-3 text-danger"></span>
+                            <h3 class="text-uppercase h4 mb-3">İMALAT</h3>
+                            <p>Hazır veya özel üretim</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="py-5 bg-danger">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-6 text-center mb-3 mb-md-0">
+                <h2 class="caption text-uppercase d-block text-white mb-4 mt-2" data-aos="fade-up">ONLİNE TEKLİF
+                    FORMU</h2>
+                <a href="javascript:void(0);" class="btn btn-bg-primary font-secondary text-uppercase caption2" data-aos="fade-up"
+                   data-aos-delay="100">TEKLİF AL</a>
+            </div>
+        </div>
+    </div>
+</div>

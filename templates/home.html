@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>{% block title %} My Home Page {% endblock %}</title>
+    <meta name="keywords" content="{% block keywords %} Home Keywords {% endblock %}">
+    <meta name="description" content="{% block description %} Home description  {% endblock %}">
+
+
+    {% load static %}
+
+
+    <link type="text/css" rel="stylesheet" href="{% static 'home/fonts/flaticon/font/flaticon.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'home/fonts/icomoon/style2.css' %}">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700|Work+Sans:300,400,700" rel="stylesheet">
+
+
+
+
+    <link type="text/css" rel="stylesheet" href="{% static 'home/css/magnific-popup.css' %}">
+
+    <!--<link type="text/css" rel="stylesheet" href="{% static 'home/css/jquery-ui.css' %}">-->
+
+    <link type="text/css" rel="stylesheet" href="{% static 'home/css/owl.carousel.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'home/css/owl.theme.default.min.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'home/css/bootstrap-datepicker.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'home/css/animate.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'home/css/aos.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'home/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/style7.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/css/custom8.css' %}"/>
+
+    <link rel='shortcut icon' type='image/x-icon' href='{{ setting.icon.url }}'/>
+
+    {% block head %}
+
+    {% endblock %}
+
+  </head>
+
+<body>
+
+{% include 'header.html' %}
+{% block slider %} {% endblock %}
+{% block body %} {% endblock %}
+
+{% include 'footer.html' %}
+
+{% block foot %} {% endblock %}
+
+
+
+</body>
+
+</html>
